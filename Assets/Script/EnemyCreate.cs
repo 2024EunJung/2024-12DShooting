@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyCreate : MonoBehaviour
 {
     public GameObject prefabEnemy;
-    public Vector2 limitMin;
-    public Vector2 limitMax;
+
+    public Transform[] spawnPoints;
+    public GameObject[] enemyObjs;
 
     // Start is called before the first frame update
     void Start()
@@ -17,24 +18,20 @@ public class EnemyCreate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     IEnumerator CreateEnemy()
     {
         while (true)
         {
-            float r = Random.Range(limitMin.x, limitMax.x);
-            Vector2 creatingPoint = new Vector2(r, limitMin.y);
+            int ranEnemy = Random.Range(0, 5);  //어느 적 소환할지
+            int ranPoint = Random.Range(0, 5);  //스폰포인트 위치
 
-            Instantiate(prefabEnemy, creatingPoint, Quaternion.identity);
+            Instantiate(enemyObjs[ranEnemy],
+                        spawnPoints[ranPoint].position/*creatingPoint*/, Quaternion.identity);
 
-            float creatingTime = Random.Range(0.5f, 3.0f);
+            float creatingTime = Random.Range(0.3f, 1.5f);
             yield return new WaitForSeconds(creatingTime);
         }
-    }
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(limitMin, limitMax);
     }
 }

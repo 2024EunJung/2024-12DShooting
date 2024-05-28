@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyMove : MonoBehaviour
+public class EnemyEliteMove : MonoBehaviour
 {
     Transform tr;
     public float speed;
@@ -42,7 +42,7 @@ public class EnemyMove : MonoBehaviour
 
         if (health <= 0)
         {
-            GameObject.Find("GameManager").GetComponent<Score>().score += 10;
+            GameObject.Find("GameManager").GetComponent<Score>().score += 50;
             Destroy(gameObject);
         }
     }

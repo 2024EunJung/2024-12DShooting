@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6299633232284849433}
   - component: {fileID: 7569504751668261585}
-  - component: {fileID: 5284097216909449986}
   - component: {fileID: 3404756594418026710}
   - component: {fileID: 3665163351375320948}
   - component: {fileID: 6366039693453922141}
@@ -88,41 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5284097216909449986
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654188218720390124}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.022783777, y: -0.12614271}
-  serializedVersion: 2
-  m_Radius: 1.8373482
 --- !u!50 &3404756594418026710
 Rigidbody2D:
   serializedVersion: 4
@@ -162,7 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a783899f6bdc444b5c08775da1823d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.02
+  speed: 0.005
+  health: 5
 --- !u!61 &6366039693453922141
 BoxCollider2D:
   m_ObjectHideFlags: 0
