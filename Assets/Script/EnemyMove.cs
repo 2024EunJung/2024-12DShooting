@@ -27,9 +27,12 @@ public class EnemyMove : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject.Find("GameManager").GetComponent<Score>().score += 10;
-        Destroy(gameObject);
-        Destroy(collision.gameObject);
+        if(collision.gameObject.tag == "Bullet")
+        {
+            GameObject.Find("GameManager").GetComponent<Score>().score += 10;
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 
 }
