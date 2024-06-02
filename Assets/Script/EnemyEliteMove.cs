@@ -23,9 +23,18 @@ public class EnemyEliteMove : MonoBehaviour
 
     IEnumerator DestorySelf()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(100.0f);
         Destroy(this.gameObject);
     }
+
+    /*void OnBecameInvisible()
+    {
+        Vector3 targetScreenPos = Camer.main.WorldToScreenPoint(this.gameObject);
+        if(targetScreenPos.x < Screen.width || targetScreenPos/x > 0 || targetScreenPos.y < targetScreenPos.y || targetScreenPos.y < 0)
+        {
+            
+        } 
+    }*/
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Bullet")

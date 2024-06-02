@@ -24,8 +24,8 @@ public class EnemyCreate : MonoBehaviour
     {
         while (true)
         {
-            int ranEnemy = Random.Range(0, 5);  //¾î´À Àû ¼ÒÈ¯ÇÒÁö
-            int ranPoint = Random.Range(0, 5);  //½ºÆùÆ÷ÀÎÆ® À§Ä¡
+            int ranEnemy = Random.Range(0, 5);  //ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½
+            int ranPoint = Random.Range(0, 5);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ä¡
 
             Instantiate(enemyObjs[ranEnemy],
                         spawnPoints[ranPoint].position/*creatingPoint*/, Quaternion.identity);

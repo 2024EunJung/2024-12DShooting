@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator DestorySelf()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(15.0f);
         Destroy(this.gameObject);
     }
     void OnTriggerEnter2D(Collider2D collision)
