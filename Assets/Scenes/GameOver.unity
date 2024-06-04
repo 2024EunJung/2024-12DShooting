@@ -389,7 +389,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Scene
+  m_Text: Go to Main
 --- !u!222 &914165622
 CanvasRenderer:
   m_ObjectHideFlags: 0
