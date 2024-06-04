@@ -8,6 +8,7 @@ public class EnemyMove : MonoBehaviour
     Transform tr;
     public float speed;
     public int health;
+    public int addScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class EnemyMove : MonoBehaviour
 
         if (health <= 0)
         {
-            GameObject.Find("GameManager").GetComponent<Score>().score += 10;
+            GameObject.Find("GameManager").GetComponent<Score>().score += addScore;
             Destroy(gameObject);
         }
     }
