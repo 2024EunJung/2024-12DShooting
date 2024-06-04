@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
+=======
+using UnityEngine.UI;
+>>>>>>> Stashed changes
 
 
 public class EnemyMove : MonoBehaviour
